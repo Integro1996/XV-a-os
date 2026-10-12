@@ -1,9 +1,12 @@
 @import '@fontsource/cormorant-garamond/latin-400.css';
 @import '@fontsource/cormorant-garamond/latin-400-italic.css';
 @import '@fontsource/cormorant-garamond/latin-500.css';
+@import '@fontsource/cormorant-garamond/latin-600.css';
+@import '@fontsource/cormorant-garamond/latin-600-italic.css';
 @import '@fontsource/manrope/latin-400.css';
 @import '@fontsource/manrope/latin-500.css';
 @import '@fontsource/manrope/latin-600.css';
+@import '@fontsource/manrope/latin-700.css';
 @import '@fontsource/great-vibes/latin-400.css';
 @import 'tailwindcss';
 
@@ -270,76 +273,82 @@ em { font-weight: 400; }
   .gallery-item-0 { grid-column: 1 / 3; grid-row: span 2; }
 }
 
-/* Legibilidad: un poco más de tamaño y peso sin perder el estilo editorial. */
+/* Legibilidad reforzada: textos secundarios más grandes, gruesos y contrastados. */
 body { font-weight: 500; }
-h2, h3 { font-weight: 500; }
-.section-description { font-weight: 500; font-size: 23px; }
-.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .2em; }
-.button { font-size: 12px; font-weight: 600; }
-.brand-text { font-size: 10px; font-weight: 600; }
-.brand-text small { font-size: 9px; font-weight: 500; }
-.desktop-nav a, .header-rsvp { font-size: 11px; font-weight: 500; }
-.hero-intro > .eyebrow { font-size: 10px; font-weight: 600; }
-.hero-pretitle { font-weight: 500; font-size: 30px; }
-.hero-subtitle { font-weight: 500; font-size: 27px; }
-.hero-date > span { font-size: 11px; font-weight: 600; }
-.hero-date small { font-size: 10px; }
-.hero-note { font-size: 18px; font-weight: 500; }
-.scroll-cue { font-size: 9px; font-weight: 600; }
-.photo-top, .caption-small { font-size: 9px; font-weight: 600; }
-.photo-caption p { font-size: 32px; font-weight: 500; }
-.hero-seal > span { font-size: 7px; font-weight: 600; }
-.countdown-label, .countdown-date { font-size: 10px; font-weight: 600; }
-.gallery-number { font-size: 10px; font-weight: 600; }
-.gallery-caption { font-size: 22px; font-weight: 500; }
-.gallery-hint { font-size: 11px; font-weight: 500; }
-.video-copy > p:not(.eyebrow) { font-size: 22px; font-weight: 500; }
-.video-cover-caption > span { font-size: 9px; font-weight: 600; }
-.video-cover-caption strong { font-size: 28px; font-weight: 500; }
-.media-note { font-size: 10px; font-weight: 500; }
-.menu-card-heading span { font-size: 11px; font-weight: 600; }
-.menu-course h3 { font-size: 29px; font-weight: 500; }
-.menu-course > p:last-child { font-size: 20px; font-weight: 500; }
-.menu-footnote { font-size: 11px; font-weight: 500; }
-.event-time { font-size: 12px; font-weight: 600; }
-.event-address { font-size: 20px; font-weight: 500; }
-.event-card .button, .location-pending, .text-link { font-size: 11px; font-weight: 600; }
-.dress-type { font-size: 12px; font-weight: 600; }
-.dress-copy > p:not(.eyebrow):not(.dress-type) { font-size: 22px; font-weight: 500; }
-.dress-palette > small { font-size: 10px; font-weight: 500; }
-.dress-note { font-size: 18px; font-weight: 500; }
-.form-field label, .attendance-field legend { font-size: 11px; }
-.form-field label > small, .form-field > small { font-size: 10px; font-weight: 500; }
-.attendance-option { font-size: 11px; font-weight: 500; }
-.field-error, .demo-notice, .rsvp-success .demo-success { font-size: 11px; font-weight: 500; }
-.form-footnote { font-size: 17px; font-weight: 500; }
-.closing-copy > p:not(.eyebrow) { font-size: 23px; font-weight: 500; }
-.footer > p { font-size: 10px; font-weight: 600; }
-.footer > span { font-size: 18px; font-weight: 500; }
-.footer-bottom small { font-size: 10px; font-weight: 500; }
-.lightbox-top > span { font-size: 11px; font-weight: 600; }
-.lightbox-bottom p { font-size: 28px; font-weight: 500; }
-.lightbox-bottom > span { font-size: 11px; font-weight: 600; }
-.lightbox-bottom > small { font-size: 10px; font-weight: 500; }
+h2, h3 { font-weight: 600; }
+.section-description { font-weight: 600; font-size: 24px; color: #59464a; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .15em; color: #70552e; }
+.button { font-size: 13px; font-weight: 700; }
+.brand-text { font-size: 12px; font-weight: 700; letter-spacing: .15em; }
+.brand-text small { font-size: 11px; font-weight: 600; color: #58474b; }
+.desktop-nav a, .header-rsvp { font-size: 13px; font-weight: 600; color: #594b4d; }
+.hero-intro > .eyebrow { font-size: 12px; font-weight: 700; }
+.hero-pretitle { font-weight: 600; font-size: 32px; color: #5d464a; }
+.hero-subtitle { font-weight: 600; font-size: 29px; color: #59494b; }
+.hero-date > span { font-size: 13px; font-weight: 700; color: #675231; }
+.hero-date small { font-size: 12px; }
+.hero-note { font-size: 20px; font-weight: 600; color: #614b4e; }
+.scroll-cue { font-size: 11px; font-weight: 700; color: #5d493d; }
+.photo-top, .caption-small { font-size: 11px; font-weight: 700; }
+.photo-caption p { font-size: 34px; font-weight: 600; }
+.hero-seal > span { font-size: 9px; font-weight: 700; }
+.countdown-label, .countdown-date { font-size: 12px; font-weight: 700; color: #604923; }
+.gallery-number { font-size: 12px; font-weight: 700; }
+.gallery-caption { font-size: 24px; font-weight: 600; }
+.gallery-hint { font-size: 13px; font-weight: 600; color: #59454a; }
+.video-copy > p:not(.eyebrow) { font-size: 23px; font-weight: 600; color: #f0d9d7; }
+.video-cover-caption > span { font-size: 11px; font-weight: 700; }
+.video-cover-caption strong { font-size: 30px; font-weight: 600; }
+.media-note { font-size: 12px; font-weight: 600; color: #efd8d6; }
+.menu-card-heading span { font-size: 13px; font-weight: 700; }
+.menu-course h3 { font-size: 30px; font-weight: 600; }
+.menu-course > p:last-child { font-size: 21px; font-weight: 600; color: #5d4b4d; }
+.menu-footnote { font-size: 13px; font-weight: 600; color: #5d474a; }
+.event-time { font-size: 14px; font-weight: 700; color: #5b484b; }
+.event-address { font-size: 21px; font-weight: 600; color: #594649; }
+.event-card .button, .location-pending, .text-link { font-size: 13px; font-weight: 700; }
+.calendar-row { font-weight: 600; color: #594548; }
+.dress-type { font-size: 14px; font-weight: 700; color: #62461f; }
+.dress-copy > p:not(.eyebrow):not(.dress-type) { font-size: 23px; font-weight: 600; color: #574649; }
+.dress-palette > small { font-size: 12px; font-weight: 600; color: #594548; }
+.dress-note { font-size: 20px; font-weight: 600; color: #60474c; }
+.form-field label, .attendance-field legend { font-size: 13px; font-weight: 700; color: #48343a; }
+.form-field label > small, .form-field > small { font-size: 12px; font-weight: 600; color: #5c494d; }
+.form-field input, .form-field textarea, .form-field select { font-size: 22px; font-weight: 600; color: #503c41; }
+.attendance-option { font-size: 13px; font-weight: 600; color: #514044; }
+.field-error, .demo-notice, .rsvp-success .demo-success { font-size: 12px; font-weight: 600; }
+.form-footnote { font-size: 19px; font-weight: 600; color: #60494d; }
+.closing-copy > p:not(.eyebrow) { font-size: 24px; font-weight: 600; }
+.footer > p { font-size: 12px; font-weight: 700; color: #5a464a; }
+.footer > span { font-size: 20px; font-weight: 600; color: #5a464a; }
+.footer-bottom small { font-size: 12px; font-weight: 600; color: #5a464a; }
+.lightbox-top > span { font-size: 13px; font-weight: 700; color: #f0d2ca; }
+.lightbox-bottom p { font-size: 30px; font-weight: 600; }
+.lightbox-bottom > span { font-size: 13px; font-weight: 700; }
+.lightbox-bottom > small { font-size: 12px; font-weight: 600; color: #c4abb3; }
+.hero h1, .brand-letter, .closing-signature, .footer-monogram, .handwritten, .menu-card-heading p, .hero-seal .seal-r { -webkit-text-stroke: .25px currentColor; }
 
 @media (max-width: 1100px) and (min-width: 801px) {
-  .desktop-nav a { font-size: 10px; }
+  .desktop-nav a { font-size: 11px; }
 }
 
 @media (max-width: 600px) {
-  .brand-text { font-size: 9px; }
-  .header-rsvp { font-size: 9px; }
-  .hero-intro > .eyebrow { font-size: 9px; }
-  .hero-date > span { font-size: 10px; }
-  .scroll-cue, .photo-top { font-size: 8px; }
-  .hero-seal > span { font-size: 6px; }
-  .countdown-label, .countdown-date { font-size: 8px; }
-  .gallery-number { font-size: 9px; }
-  .gallery-hint, .menu-footnote { font-size: 10px; }
-  .form-field label, .attendance-field legend, .form-field label > small, .form-field > small { font-size: 10px; }
-  .attendance-option { font-size: 11px; }
-  .footer-bottom small { font-size: 9px; }
-  .lightbox-top > span { font-size: 10px; }
-  .lightbox-bottom > span { font-size: 10px; }
-  .lightbox-bottom > small { font-size: 9px; }
+  .brand-text { font-size: 10px; }
+  .brand-text small { font-size: 10px; }
+  .header-rsvp { font-size: 10px; }
+  .hero-intro > .eyebrow { font-size: 11px; }
+  .hero-date > span { font-size: 12px; }
+  .scroll-cue, .photo-top, .caption-small { font-size: 10px; }
+  .hero-seal > span { font-size: 8px; }
+  .countdown-label, .countdown-date { font-size: 11px; }
+  .gallery-number { font-size: 11px; }
+  .gallery-caption { font-size: 21px; }
+  .gallery-hint, .menu-footnote { font-size: 12px; }
+  .form-field label, .attendance-field legend { font-size: 12px; }
+  .form-field label > small, .form-field > small { font-size: 11px; }
+  .attendance-option { font-size: 12px; }
+  .footer-bottom small { font-size: 11px; }
+  .lightbox-top > span { font-size: 12px; }
+  .lightbox-bottom > span { font-size: 12px; }
+  .lightbox-bottom > small { font-size: 11px; }
 }
