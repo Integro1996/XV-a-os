@@ -28,7 +28,7 @@ test('configured RSVP sends JSON and reports service failures', async () => {
   const originalFetch = globalThis.fetch;
   try {
     let request;
-    globalThis.fetch = async (url, options) => { request = { url, options }; return { ok: true }; };
+    globalThis.fetch = async (url, options) => { request = { url, options }; return { ok: true, json: async () => ({ id: 'test', editToken: 'token' }) }; };
     const result = await submitRSVP({ name: 'Ana López', attendance: 'yes', guests: '2' }, 'https://example.com/rsvp');
     assert.equal(result.mode, 'remote');
     assert.equal(request.options.method, 'POST');

@@ -46,24 +46,28 @@ test('touch gallery navigation wraps and closing by button works', async ({ page
   await expect(page.getByRole('dialog')).not.toBeVisible();
 });
 
-test('RSVP validates inputs, saves demo with guests, and allows editing', async ({ page }) => {
+test('RSVP validates inputs, sends confirmations, and allows editing', async ({ page }) => {
+  const requests = [];
+  await page.route('**/api/rsvp', async route => { requests.push(route.request().postDataJSON()); await route.fulfill({ status: 201, json: { id: '12345678-1234-1234-1234-123456789abc', editToken: '87654321-1234-1234-1234-123456789abc' } }); });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Guardar respuesta de prueba' }).click();
+  await page.getByRole('button', { name: 'Confirmar mi respuesta' }).click();
   await expect(page.getByText('Escribe tu nombre completo (al menos 3 caracteres).')).toBeVisible();
   await expect(page.getByText('Selecciona si podrás acompañarnos.')).toBeVisible();
   await page.getByLabel('Nombre completo').fill('María López');
   await page.getByLabel('¡Sí, ahí estaré!').check();
   await page.getByLabel('Número de acompañantes').selectOption('2');
   await page.getByLabel('Restricciones alimenticias').fill('Sin nueces');
-  await page.getByRole('button', { name: 'Guardar respuesta de prueba' }).click();
-  await expect(page.getByRole('status')).toContainText('Esta demostración no envía tu confirmación al organizador.');
-  const response = await page.evaluate(() => JSON.parse(localStorage.getItem('regina-xv-rsvp')));
+  await page.getByRole('button', { name: 'Confirmar mi respuesta' }).click();
+  await expect(page.getByRole('status')).toContainText('¡Gracias por tu respuesta!');
+  const response = requests[0];
   expect(response.name).toBe('María López'); expect(response.guests).toBe(2); expect(response.dietary).toBe('Sin nueces');
   await page.getByRole('button', { name: 'Editar mi respuesta' }).click();
   await page.getByLabel('No podré asistir').check();
   await expect(page.getByLabel('Número de acompañantes')).toHaveCount(0);
-  await page.getByRole('button', { name: 'Guardar respuesta de prueba' }).click();
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('regina-xv-rsvp')).guests)).toBe(0);
+  await page.getByRole('button', { name: 'Confirmar mi respuesta' }).click();
+  await expect(page.getByRole('status')).toContainText('¡Gracias por tu respuesta!');
+  expect(requests[1].guests).toBe(0);
+  expect(requests[1].id).toBe('12345678-1234-1234-1234-123456789abc');
 });
 
 test('video loads actual media and calendar contains the correct timezone conversion', async ({ page }) => {

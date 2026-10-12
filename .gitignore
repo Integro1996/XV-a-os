@@ -1,4 +1,8 @@
 node_modules/
+.sites-runtime/
+.wrangler/
+.vinext/
+.next/
 dist/
 playwright-report/
 test-results/

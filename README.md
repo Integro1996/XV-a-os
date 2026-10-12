@@ -1,6 +1,14 @@
 # Regina · Mis XV
 
-Invitación digital de una sola página, pensada para celular. React 19 + Vite 6, Tailwind CSS 4, Framer Motion y Lucide. No necesita cuentas, credenciales ni servidor de base de datos para la demostración.
+Invitación digital de una sola página, pensada para celular. React 19 + Vinext/Vite, Tailwind CSS 4, Framer Motion y Lucide, con confirmaciones persistentes en Cloudflare D1.
+
+## Confirmaciones en producción
+
+El formulario usa `POST /api/rsvp` y guarda las respuestas en D1 (`DB`, tabla `confirmations`). El servidor valida los campos y registra las fechas. El navegador conserva un recibo privado para actualizar la misma respuesta al editarla; no compartas ese recibo. Al borrar los datos del navegador se pierde la posibilidad de editar el registro anterior desde ese dispositivo.
+
+El panel `/admin` permite consultar respuestas, contar personas y descargar CSV. La API `/api/confirmations` autoriza únicamente la cuenta del organizador `albertoafm96@gmail.com`, usando la identidad que proporciona Sites. El panel nunca muestra los tokens de edición. El Site conserva su acceso privado: compartirlo con invitados requiere configurar su audiencia por separado.
+
+La configuración está en `.openai/hosting.json`. Las migraciones generadas con `npm run db:generate` viven en `drizzle/` y Sites las aplica al desplegar. No modificar migraciones aplicadas. Para probar D1 localmente, genera el build y aplica la migración siguiendo los comandos de `scripts/sites-env.mjs` y Wrangler. Con el preview en el puerto 4173, `node tests/integration.mjs` comprueba crear, editar, persistir y controlar el acceso; los registros de prueba quedan solo en la base local.
 
 ## Desarrollo
 

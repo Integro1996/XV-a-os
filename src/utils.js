@@ -14,8 +14,15 @@ export function validateRSVP(values) {
 export async function submitRSVP(values, endpoint) {
   const payload = { ...values, name: values.name.trim(), guests: values.attendance === 'yes' ? Number(values.guests) : 0, submittedAt: new Date().toISOString() };
   if (endpoint) {
+    try {
+      const saved = JSON.parse(localStorage.getItem('regina-xv-receipt') || 'null');
+      if (saved?.id && saved?.editToken) { payload.id = saved.id; payload.editToken = saved.editToken; }
+    } catch { /* Storage may be unavailable; submitting still works. */ }
     const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
     if (!response.ok) throw new Error('No pudimos enviar tu respuesta. Inténtalo de nuevo.');
+    const receipt = await response.json();
+    if (!receipt.id || !receipt.editToken) throw new Error('No pudimos verificar que la respuesta se guardó. Inténtalo de nuevo.');
+    try { localStorage.setItem('regina-xv-receipt', JSON.stringify(receipt)); } catch { /* Confirmation is already stored on the server. */ }
     return { mode: 'remote', payload };
   }
   // Demo: solo se guarda en este navegador, no se envía al organizador.

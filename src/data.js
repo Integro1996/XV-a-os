@@ -22,7 +22,7 @@ export const invitation = {
   closing: 'Los mejores recuerdos comienzan con las personas que más queremos.',
   rsvpDeadline: '1 de diciembre',
   // Agrega una URL HTTPS para enviar confirmaciones a tu backend. Vacío = demo local.
-  rsvpEndpoint: '',
+  rsvpEndpoint: '/api/rsvp',
   dressCode: { title: 'Una noche para brillar', type: 'Formal · etiqueta', description: 'Traje y vestido largo. El rosa está reservado para la quinceañera; tú trae tu mejor sonrisa.', colors: ['#3f4546', '#867687', '#b9a17c', '#768279'] },
 };
 export const photos = [
