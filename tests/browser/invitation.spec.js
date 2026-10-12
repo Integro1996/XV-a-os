@@ -19,11 +19,11 @@ test('fullscreen gallery supports next, previous, zoom, keyboard, and focus rest
   await trigger.click();
   const dialog = page.getByRole('dialog');
   await expect(dialog).toBeVisible();
-  await expect(dialog.locator('.lightbox-bottom > span')).toHaveText('1 / 4');
+  await expect(dialog.locator('.lightbox-bottom > span')).toHaveText('1 / 9');
   await page.getByRole('button', { name: 'Foto siguiente' }).click();
-  await expect(dialog.locator('.lightbox-bottom > span')).toHaveText('2 / 4');
+  await expect(dialog.locator('.lightbox-bottom > span')).toHaveText('2 / 9');
   await page.keyboard.press('ArrowLeft');
-  await expect(dialog.locator('.lightbox-bottom > span')).toHaveText('1 / 4');
+  await expect(dialog.locator('.lightbox-bottom > span')).toHaveText('1 / 9');
   await page.getByRole('button', { name: 'Ampliar foto' }).click();
   await expect(dialog.locator('.lightbox-image-area')).toHaveClass(/zoomed/);
   await page.keyboard.press('Escape');
@@ -41,7 +41,7 @@ test('touch gallery navigation wraps and closing by button works', async ({ page
     el.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, touches: [start], changedTouches: [start] }));
     el.dispatchEvent(new TouchEvent('touchend', { bubbles: true, touches: [], changedTouches: [end] }));
   });
-  await expect(page.locator('.lightbox-bottom > span')).toHaveText('2 / 4');
+  await expect(page.locator('.lightbox-bottom > span')).toHaveText('2 / 9');
   await page.getByRole('button', { name: 'Cerrar', exact: true }).click();
   await expect(page.getByRole('dialog')).not.toBeVisible();
 });

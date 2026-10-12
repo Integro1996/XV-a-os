@@ -1,4 +1,4 @@
-// Edita aquí el contenido. Las fotos, el menú y los lugares son ejemplos.
+// Edita aquí el contenido de la invitación.
 export const EVENT_DATE = '2026-12-19T20:00:00-06:00';
 const eventDate = new Date(EVENT_DATE);
 const format = options => new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Mexico_City', ...options }).format(eventDate);
@@ -17,7 +17,9 @@ export const invitation = {
   dateShort: `${eventDisplay.day} · ${eventDisplay.monthNumber} · ${eventDisplay.year}`,
   year: eventDisplay.year,
   city: 'Veracruz, Ver.',
-  heroImage: '/images/portrait.png',
+  heroImage: '/images/fotosdexv/img5.JPG',
+  heroImageAlt: 'Regina posando en puntas frente al Ángel de la Independencia',
+  heroImagePosition: '50% 46%',
   intro: 'Hay momentos que se guardan para siempre. Este es el mío, y quiero compartirlo contigo.',
   closing: 'Los mejores recuerdos comienzan con las personas que más queremos.',
   rsvpDeadline: '1 de diciembre',
@@ -26,14 +28,19 @@ export const invitation = {
   dressCode: { title: 'Elegancia para celebrar', type: 'Vestimenta formal', description: 'Vestido largo o traje formal. El color azul está reservado para la quinceañera; por favor elige otro color.', colors: ['#2f2928', '#7a3e4d', '#b99a6a', '#8a6a54'] },
 };
 export const photos = [
-  { src: '/images/portrait.png', alt: 'Retrato ilustrativo con vestido rosa en un jardín', label: 'Un nuevo capítulo', position: '50% 28%' },
-  { src: '/images/flowers.svg', alt: 'Ilustración de flores en tonos rosa y marfil', label: 'La belleza de los detalles', position: '50% 50%' },
-  { src: '/images/portrait.png', alt: 'Detalle del vestido de gala rosa, imagen de ejemplo', label: 'Un vestido, mil sueños', position: '50% 78%' },
-  { src: '/images/portrait.png', alt: 'Una tarde en el jardín, retrato ilustrativo', label: 'Así comienza mi historia', position: '50% 12%' },
+  { src: '/images/fotosdexv/img3.JPG', alt: 'Regina bailando en una calle arbolada', label: 'El arte de soñar', position: '50% 42%' },
+  { src: '/images/fotosdexv/img1.JPG', alt: 'Regina en pose de ballet frente al Ángel de la Independencia', label: 'Un nuevo capítulo', position: '50% 48%' },
+  { src: '/images/fotosdexv/img2.JPG', alt: 'Regina realizando una pose de ballet entre los árboles', label: 'Sin miedo a volar', position: '50% 36%' },
+  { src: '/images/fotosdexv/img4.JPG', alt: 'Regina bailando en Paseo de la Reforma', label: 'Instantes de luz', position: '50% 45%' },
+  { src: '/images/fotosdexv/img5.JPG', alt: 'Regina posando en puntas frente al Ángel de la Independencia', label: 'Mi momento', position: '50% 42%' },
+  { src: '/images/fotosdexv/img6.JPG', alt: 'Regina extendiendo los brazos frente al Ángel de la Independencia', label: 'Cada paso, un sueño', position: '47% 44%' },
+  { src: '/images/fotosdexv/img7.JPG', alt: 'Regina en arabesque sobre Paseo de la Reforma', label: 'Alas para crecer', position: '50% 44%' },
+  { src: '/images/fotosdexv/img8.JPG', alt: 'Regina posando con el Ángel de la Independencia al fondo', label: 'La magia del camino', position: '58% 43%' },
+  { src: '/images/fotosdexv/img9.JPG', alt: 'Retrato de Regina frente al Ángel de la Independencia', label: 'Así comienza mi historia', position: '58% 40%' },
 ];
 export const videos = [
   // Puedes usar { type: 'youtube', youtubeId: 'ID', ... } en lugar de un archivo local.
-  { type: 'local', src: '/videos/momento.mp4', poster: '/images/flowers.svg', title: 'La magia está en los pequeños momentos', description: 'Un pequeño adelanto de la inspiración para esta noche.', caption: 'Video de muestra · reemplázalo con tu video favorito' },
+  { type: 'local', src: '/videos/momento.mp4', poster: '/images/fotosdexv/img7.JPG', posterAlt: 'Regina bailando frente al Ángel de la Independencia', title: 'La magia está en los pequeños momentos', description: 'Un pequeño adelanto de la inspiración para esta noche.', caption: 'Un recuerdo especial antes de mis XV' },
 ];
 export const menu = [
   { course: 'Para comenzar', title: 'Crema de flores de calabaza', description: 'Con un toque de queso de cabra y crujiente de parmesano', icon: 'starter' },

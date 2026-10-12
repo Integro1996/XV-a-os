@@ -20,7 +20,7 @@ export default function Hero() {
       <Flower2 className="hero-flower flower-two" aria-hidden="true" size={150} strokeWidth={0.4} />
     </div>
     <div className="hero-visual">
-      <motion.img className="hero-photo" src={invitation.heroImage} alt="Imagen ilustrativa de una quinceañera con vestido rosa en un jardín" fetchPriority="high" initial={{ scale: reduced ? 1 : 1.06, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.5 }} />
+      <motion.img className="hero-photo" src={invitation.heroImage} alt={invitation.heroImageAlt} style={{ objectPosition: invitation.heroImagePosition }} fetchPriority="high" initial={{ scale: reduced ? 1 : 1.06, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.5 }} />
       <div className="photo-frame" aria-hidden="true" />
       <div className="photo-top"><Sparkles size={15} /><span>EL COMIENZO DE ALGO BONITO</span></div>
       <Reveal className="photo-caption"><span className="caption-line" /><p>Un día para soñar.<br /><em>Una noche para recordar.</em></p><span className="caption-small">{invitation.name.toUpperCase()} · MIS XV</span></Reveal>
