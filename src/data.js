@@ -23,7 +23,7 @@ export const invitation = {
   rsvpDeadline: '1 de diciembre',
   // Agrega una URL HTTPS para enviar confirmaciones a tu backend. Vacío = demo local.
   rsvpEndpoint: '/api/rsvp',
-  dressCode: { title: 'Una noche para brillar', type: 'Formal · etiqueta', description: 'Traje y vestido largo. El rosa está reservado para la quinceañera; tú trae tu mejor sonrisa.', colors: ['#3f4546', '#867687', '#b9a17c', '#768279'] },
+  dressCode: { title: 'Elegancia para celebrar', type: 'Vestimenta formal', description: 'Vestido largo o traje formal. El color azul está reservado para la quinceañera; por favor elige otro color.', colors: ['#2f2928', '#7a3e4d', '#b99a6a', '#8a6a54'] },
 };
 export const photos = [
   { src: '/images/portrait.png', alt: 'Retrato ilustrativo con vestido rosa en un jardín', label: 'Un nuevo capítulo', position: '50% 28%' },
