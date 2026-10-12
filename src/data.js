@@ -1,5 +1,5 @@
 // Edita aquí el contenido. Las fotos, el menú y los lugares son ejemplos.
-export const EVENT_DATE = '2026-12-19T18:00:00-06:00';
+export const EVENT_DATE = '2026-12-19T20:00:00-06:00';
 const eventDate = new Date(EVENT_DATE);
 const format = options => new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Mexico_City', ...options }).format(eventDate);
 export const eventDisplay = { day: format({ day: 'numeric' }), month: format({ month: 'long' }), weekday: format({ weekday: 'long' }), year: format({ year: 'numeric' }), monthNumber: format({ month: '2-digit' }) };
@@ -16,7 +16,7 @@ export const invitation = {
   dateLabel: format({ day: 'numeric', month: 'long', year: 'numeric' }),
   dateShort: `${eventDisplay.day} · ${eventDisplay.monthNumber} · ${eventDisplay.year}`,
   year: eventDisplay.year,
-  city: 'Ciudad de México',
+  city: 'Veracruz, Ver.',
   heroImage: '/images/portrait.png',
   intro: 'Hay momentos que se guardan para siempre. Este es el mío, y quiero compartirlo contigo.',
   closing: 'Los mejores recuerdos comienzan con las personas que más queremos.',
@@ -42,8 +42,7 @@ export const menu = [
   { course: 'Para brindar', title: 'Un brindis por los sueños', description: 'Mocktails de frutos rojos, aguas frescas y refrescos', icon: 'drinks' },
 ];
 export const events = [
-  { name: 'La ceremonia', time: '18:00 h', place: 'Parroquia de San Jacinto', address: 'Plaza San Jacinto 18, San Ángel, CDMX', mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Jacinto+San+Angel+CDMX', icon: 'church' },
-  { name: 'La celebración', time: '19:30 h', place: 'Jardín de los Sueños', address: 'Lugar de ejemplo · dirección por confirmar', mapsUrl: '', icon: 'party' },
+  { name: 'La celebración', time: '20:00 h', place: 'Quinta Casa Del Árbol', address: 'Álvaro Obregón 48, Coyol Ivec, 91780 Veracruz, Ver.', mapsUrl: 'https://g.co/kgs/7nVhfAE', icon: 'party' },
 ];
 export const navigation = [
   ['Inicio', 'inicio'], ['Galería', 'galeria'], ['Video', 'video'], ['Menú', 'menu'], ['Evento', 'evento'], ['Dress code', 'vestimenta'], ['RSVP', 'rsvp'],

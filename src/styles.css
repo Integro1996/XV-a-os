@@ -158,7 +158,7 @@ em { font-weight: 400; }
 .menu-course > p:last-child { font: 18px/1.45 'Cormorant Garamond', serif; max-width: 280px; margin: auto; color: #79665c; }
 .menu-footnote { font-size: 9px; text-align: center; color: #786154; padding-top: 30px; border-top: 1px solid #eadfd2; margin-top: 15px; line-height: 1.7; }
 .event-section { background: #f4ece5; }
-.event-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 950px; margin: auto; }
+.event-grid { display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; gap: 24px; max-width: 950px; margin: auto; }
 .event-card { position: relative; text-align: center; border: 1px solid #d9cbbf; background: #faf6f066; padding: 40px 30px 35px; }
 .event-card > svg { margin: 0 auto 22px; color: #ad9175; }
 .event-index { position: absolute; left: 22px; top: 17px; color: #7d624c; font: 21px 'Cormorant Garamond', serif; }

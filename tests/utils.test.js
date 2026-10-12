@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { getCountdown, validateRSVP, submitRSVP } from '../src/utils.js';
 
 test('countdown respects Mexico UTC offset and separates units', () => {
-  assert.deepEqual(getCountdown('2026-12-19T18:00:00-06:00', Date.parse('2026-12-18T22:58:59Z')), { days: 1, hours: 1, minutes: 1, seconds: 1, expired: false });
+  assert.deepEqual(getCountdown('2026-12-19T20:00:00-06:00', Date.parse('2026-12-19T00:58:59Z')), { days: 1, hours: 1, minutes: 1, seconds: 1, expired: false });
 });
 test('past and invalid dates cannot produce negative or NaN counters', () => {
   for (const date of ['2020-01-01T00:00:00Z', 'invalid']) assert.deepEqual(getCountdown(date), { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true });

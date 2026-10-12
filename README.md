@@ -33,7 +33,7 @@ Publica la carpeta `dist` en un servicio de hosting estático. Compartir por Wha
 
 El contenido está en `src/data.js`:
 
-- `EVENT_DATE`: fecha y hora con zona horaria explícita. Actualmente 19 de diciembre de 2026 a las 18:00 en Ciudad de México (`-06:00`). El año, día, mes, día de la semana y cuenta regresiva se derivan de esta constante.
+- `EVENT_DATE`: fecha y hora con zona horaria explícita. Actualmente 19 de diciembre de 2026 a las 20:00 en Veracruz (`-06:00`). El año, día, mes, día de la semana y cuenta regresiva se derivan de esta constante.
 - `invitation`: nombre, ciudad, texto de bienvenida, despedida, fecha límite del RSVP y dress code.
 - `copy`: textos principales de portada, galería y cierre.
 - `photos`: rutas, descripciones accesibles, títulos y posición de encuadre. Admite cualquier número de fotos en el lightbox; para cambiar el número de tarjetas visibles ajusta el grid en `src/styles.css`.

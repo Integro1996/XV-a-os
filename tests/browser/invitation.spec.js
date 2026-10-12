@@ -81,7 +81,9 @@ test('video loads actual media and calendar contains the correct timezone conver
   const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Agregar a mi calendario' }).click()]);
   expect(download.suggestedFilename()).toBe('regina-mis-xv.ics');
   const stream = await download.createReadStream(); const parts = []; for await (const part of stream) parts.push(part);
-  expect(Buffer.concat(parts).toString()).toContain('DTSTART:20261220T000000Z');
+  const calendar = Buffer.concat(parts).toString();
+  expect(calendar).toContain('DTSTART:20261220T020000Z');
+  expect(calendar).toContain('LOCATION:Quinta Casa Del Árbol');
 });
 
 test('mobile menu links navigate and close', async ({ page }, testInfo) => {
